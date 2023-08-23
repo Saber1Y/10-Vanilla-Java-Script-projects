@@ -1,0 +1,87 @@
+@import './resets';
+@import './variables';
+@import './mixin';
+
+
+body {
+    background-color: $primary-bg-color;
+    font-family: $primary-font;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+img {
+    max-width: 100%
+}
+.card {
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    overflow: hidden;
+    width: 350px;
+  
+    &-header {
+        height: 200px
+    }
+    &-image {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+  }
+  .card-content {
+    background-color: $white-color;
+    padding: 30px;
+
+    &-title {
+        height: 20px;
+        margin: 0;
+    }
+    &-excerpt {
+        color: $gray-color;
+        margin: 10px 0 20px;
+    }
+ .author {
+    @include flex(row, flex);
+ }
+    .profile-img {
+        border-radius: 50%;
+        overflow: hidden;
+        height: 40px;
+        width: 40px;
+    }
+     .author-info {
+        @include flex(column, space-around);
+        margin-left: 10px;
+          width: 100px;
+     }
+    .small {
+        color: $light-gray-color;
+        margin-top: 5px;
+    }
+  }
+
+  .animated-bg {
+  background-image: $animated-bg-gradient;
+  background-size: $animated-bg-size;
+  animation: bgPos $bg-animation-duration linear infinite;
+  }
+  .animated-bg-text {
+    border-radius: 50px;
+    display: inline-block;
+    margin: 0;
+    height: 10px;
+    width: 100%;
+  }
+
+  @keyframes bgPos {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: -150% 0;
+  }
+  }
