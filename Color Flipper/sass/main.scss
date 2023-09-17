@@ -1,0 +1,47 @@
+@import 'colors';
+
+.main-bg {
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    background-color: $main-background; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+  
+    .center-txt {
+      background-color: $bl-color;
+      color: $text-background;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-weight: 800;
+      font-family: Lato, sans-serif;
+      letter-spacing: 1.5px;
+    }
+  
+    #color-name {
+        color: $main-background;
+    }
+    .btn {
+      background-color: red;
+      color: $bl-color;
+      border: 2px solid blue; 
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 900;
+  
+      &:hover {
+        background-color: blue;
+        color: white;
+        border-color: blue;
+      }
+    }
+  }
+  
